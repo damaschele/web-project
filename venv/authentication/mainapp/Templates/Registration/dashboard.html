@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<header>
+    <script src="https://kit.fontawesome.com/15a13ed4c5.js" crossorigin="anonymous"></script>
+</header>
+
+<body>
+    <dev class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class="active"><i class="fas fa-home"></i></li>
+                <li><i class="fas fa-chart-line"></i></li>
+                <li><i class="fas fa-shopping-cart"></i></li>
+                <li><i class="fas fa-ribbon"></i></li>
+                <li><i class="fas fa-money-bill-alt"></i></li>
+                <li><i class="fas fa-trophy"></i></li>
+                <li><a href="{% url 'logout' %}"><i class="fas fa-arrow-right-from-bracket"></i></a></li>
+
+            </ul>
+        </div>
+        <div class="main">
+            <div class="head">
+                <div class="head-title">
+                    <h2>Dashboard</h2>
+                    <span>Payment Updates</span>
+                </div>
+                <div class="head-search">
+                    <input type="search" placeholder="search">
+                </div>
+                <div class="head-user">
+                    <i class="fas fa-circle-user"></i>
+                    <p>{{ request.user.username }}</p>
+                </div>
+            </div>
+            <div class="main-board">
+                <div class="card-board">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <span>Transfer via Card Number</span>
+                            <h5>$120.00</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <span>Transfer via other Bancks</span>
+                            <h5>$200.00</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-university"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <span>Transfer via same Banks</span>
+                            <h5>$100.00</h5>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fab fa-paypal"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <span>Transfer via Paypal</span>
+                            <h5>$500.00</h5>
+                    </div>
+                </div>
+
+                <div class="head">
+                    <div class="head-title">
+                        <h2>Balance</h2>
+                        <span>$2,500.00</span>
+                    </div>
+               </div>
+
+               <div class="balance">
+                <div class="balance-deatils">
+                    <ul class="deatils">
+                        <li class="topic">Date</li>
+                        <li><a href="#">23 - 05 - 2023</a></li>
+                        <li><a href="#">24 - 05 - 2023</a></li>
+                        <li><a href="#">25 - 05 - 2023</a></li>
+                        <li><a href="#">26 - 05 - 2023</a></li>
+                    </ul>
+                    <ul class="deatils">
+                        <li class="topic">Name</li>
+                        <li><a href="#">Code Info</a></li>
+                        <li><a href="#">Programming with Java</a></li>
+                        <li><a href="#">Code with harry</a></li>
+                        <li><a href="#">W3 School</a></li>
+                    </ul>
+                    <ul class="deatils">
+                        <li class="topic">Status</li>
+                        <li><a href="#">Done</a></li>
+                        <li><a href="#">Pending</a></li>
+                        <li><a href="#">Done</a></li>
+                        <li><a href="#">Pending</a></li>
+                    </ul>
+                    <ul class="deatils">
+                        <li class="topic">Total</li>
+                        <li><a href="#">$100.00</a></li>
+                        <li><a href="#">$00.00</a></li>
+                        <li><a href="#">$1500.00</a></li>
+                        <li><a href="#">$00.00</a></li>
+                    </ul>
+                </div>
+               </div>
+        </div>
+    </dev>
+</body>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="app">
+        
+    Hello, {{ request.user.username }}
+    <p>Welcome to your page</p>
+    <p>You can change your password <a href="{% url 'password_change' %}">here</a></p>
+    <a href="{% url 'logout' %}">Logout</a>
+     </div> -->

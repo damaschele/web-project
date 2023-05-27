@@ -1,0 +1,158 @@
+<!-- {% extends "base.html" %} -->
+{% block title %}{% endblock %}
+{% block content %}
+{% load static %}
+<html>
+
+<head>
+    <title>Web-cp</title>
+    
+    <!-- <link rel="stylesheet" href="{% static 'css\index.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/l5.png' %}" alt="ad">
+            </div>
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="#service">Our Service</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <button><a href="{% url 'login' %}">Login</a></button>
+            </ul>
+        </div>
+    </nav>
+        
+    <div class="hero">
+        
+        <div class="container">
+            <h1>Confiabilidade Total</h1>
+            <p>Somos o seu parceiro financeiro para todas as etapas da vida.</p>
+                <div class="button">
+                <button class="btn">SUBSCREVER</button>
+            </div>
+        </div>
+    </div>
+    <section id="service">
+        <div class="service">
+            <h1>OUR SERVICE</h1>
+            <main class="cards">
+               
+                <section class="card criar">
+                    <div class="icon">
+                        <img src="{% static 'images/pen.png' %}" alt="ad">
+                    </div>
+                    <h3>Criar Conta.</h3>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    <button>Ver Mais</button>
+                </section>
+                <section class="card pagar">
+                    <div class="icon">
+                        <img src="{% static 'images/p.png' %}" alt="ad">
+                    </div>
+                    <h3>Fazer Pagamentos.</h3>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    <button>Ver Mais</button>
+                </section>
+                <section class="card casa">
+                    <div class="icon">
+                        <img src="{% static 'images/h.png' %}" alt="ad">
+                    </div>
+                    <h3>Comprar Casa.</h3>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    <button>Ver Mais</button>
+                </section>
+                <section class="card poupanca">
+                    <div class="icon">
+                        <img src="{% static 'images/pi.png' %}" alt="ad">
+                    </div>
+                    <h3>Fazer Poupanca.</h3>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    <button>Ver Mais</button>
+                </section>
+            </main>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about">
+            <div class="inf">
+                <h1>ABOUT US</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Dolores voluptatem dignissimos non natus temporibus error
+                    tenetur harum odit quisquam porro quia, dolor molestias 
+                    deleniti reiciendis assumenda voluptas. Numquam, nulla accusantium!
+                </p>
+                <button><a href="#">VER MAIS</a></button>
+            </div>
+            <div class="image">
+                <img src="{% static 'images/a.jpg' %}" alt="ad">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact">
+            <h1>CONTACT US</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3>Send your request</h3>
+                    <form action="">
+                        <div class="input-row">
+                            <div class="input-gourp">
+                                <label>Name</label>
+                                <input type="text" placeholder="John Amendo">
+                            </div>
+                            <div class="input-gourp">
+                                <label>Phone</label>
+                                <input type="text" placeholder="+258 82 000 000 1">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-gourp">
+                                <label>Email</label>
+                                <input type="email" placeholder="John@gamil.com">
+                            </div>
+                            <div class="input-gourp">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Product Demo">
+                            </div>
+                        </div>
+
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit" class="sub">Send</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h3>Reach Us</h3>
+
+
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td>contactus@exemple.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>+284 82 000 000 1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <script src="{% static 'js\main.js' %}"></script>  
+  
+        {% endblock %}
+</body>
+
+</html>
+

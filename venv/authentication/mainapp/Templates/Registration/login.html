@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+    <script>
+        {% if form.errors %}
+        window.onload = function() {
+            alert("Verifique seu nome de usuário ou senha.");
+        };
+        {% endif %}
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            <div class="titulo">
+                <h1>Login</h1>
+            </div>
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+            <p>
+                <input class="submit" type="submit" value="Login"/>
+            </p>
+            <p>
+                <a href="#">
+                    Esqueceu sua senha?
+                </a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
